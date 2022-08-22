@@ -7,7 +7,7 @@ This application is a password generator, so that users can create random passwo
 * responsive webpage that is appealing on various browser sizes
 
 # Screenshot
-Application screenshot: ![here](Develop/assets/Password_Generator_Screenshot.png?raw=true "here")
+Application screenshot: ![here](assets/Password_Generator_Screenshot.png?raw=true "here")
 
 # Links
 The deployed application can be viewed here: https://kwalexander.github.io/password-generator/
