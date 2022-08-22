@@ -1,4 +1,4 @@
-// Arrays
+// Setup variable arrays and data
 
 var charLength = 10;
 var charArray = [];
@@ -31,7 +31,7 @@ function writePassword() {
 
 // function to generate and store the password
 function generatePassword() {
-  // generate new password based on the prompt responses. Math.random will create a random number, multiplied times the character length provided by the user, which will then round down to the next lowest integer.
+  // generate new password based on the prompt responses. Math.random will create a random number, multiplied times the character length provided by the user, which will then round down to the next lowest integer
   var password = "" ;
   // loop will run as many times as the character length, ultimately creating the new password
   for(var i = 0; i < charLength; i++) {
@@ -39,12 +39,11 @@ function generatePassword() {
     password = password + charArray[randomCharacter];
   }
     return password;
-
 }
 
-// function to prompt the user for the password criteria
+// function to prompt the user for the password criteria, starting with length and then type of characters
 function startPrompts() {
-  // reset settings if the user wants to generate multiple passwords
+  // reset data if the user wants to generate multiple passwords
   charArray = [];
 
   // function to ask for password length between 8-128, then parse the string as an integer, and store as `charLength` variable
@@ -56,10 +55,9 @@ function startPrompts() {
     return false;
   }
   
-  // window prompts to ask the user if they want numbers, lowerCase, upperCase, special characters in their 
-  
+  // window prompts to ask the user if they want numbers, lowerCase, upperCase, special characters in their password. Update in case user cancels all inputs.
   if (confirm("Would you like numbers in your password?")) {
-    charArray = charArray.concat(numberArr);
+    charArray = charArray.concat(numberArr); // if user accepts the criteria, the number array is merged into the character array, which is later used in the for loop.
   }
 
   if (confirm("Would you like lowercase letters in your password?")) {
